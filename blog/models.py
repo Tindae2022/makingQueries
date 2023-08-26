@@ -20,17 +20,3 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
-
-class Enter(models.Model):
-    bolg = models.ForeignKey(Bolg, on_delete=models.CASCADE)
-    headline = models.CharField(max_length=255)
-    body_text = models.TextField()
-    pub_date = models.DateField()
-    mod_date = models.DateField()
-    authors = models.ManyToManyField(Author)
-    number_of_comment = models.IntegerField(default=0)
-    number_of_pingbacks = models.IntegerField(default=0)
-    rating = models.IntegerField(default=5)
-
-    def __str__(self):
-        return self.headline
