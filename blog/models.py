@@ -4,3 +4,7 @@ from django.db import models
 
 from datetime import date
 
+class Author(models.Model):
+    name = models.Charfield()
+    email = models.EmailField()
+
