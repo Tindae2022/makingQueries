@@ -21,7 +21,7 @@ class Author(models.Model):
         return self.name
 
 
-class Enter(models.Model):
+class Entry(models.Model):
     bolg = models.ForeignKey(Bolg, on_delete=models.CASCADE)
     headline = models.CharField(max_length=255)
     body_text = models.TextField()
