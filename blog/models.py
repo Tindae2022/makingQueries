@@ -14,7 +14,7 @@ class Bolg(models.Model):
 
 
 class Author(models.Model):
-    name = models.Charfield()
+    name = models.CharField(max_length=100)
     email = models.EmailField()
 
     def __str__(self):
