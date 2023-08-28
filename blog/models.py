@@ -5,7 +5,7 @@ from django.db import models
 from datetime import date
 
 
-class Bolg(models.Model):
+class Blog(models.Model):
     name = models.CharField(max_length=100)
     tagline = models.TextField()
 
@@ -22,7 +22,7 @@ class Author(models.Model):
 
 
 class Entry(models.Model):
-    bolg = models.ForeignKey(Bolg, on_delete=models.CASCADE)
+    bolg = models.ForeignKey(Blog, on_delete=models.CASCADE)
     headline = models.CharField(max_length=255)
     body_text = models.TextField()
     pub_date = models.DateField()
